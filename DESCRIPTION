@@ -17,3 +17,6 @@ Imports: magrittr,
     tidyr,
     utils,
     assertthat
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
