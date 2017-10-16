@@ -10,6 +10,8 @@
 #' @import utils
 #'
 #' @export
+#'
+#'
 my_csv_reader <- function(folder){
   l <- list.files(path = folder, pattern=".*csv$", full.names = TRUE )
   result <- lapply(l,read.csv2)
