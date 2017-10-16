@@ -1,25 +1,28 @@
 #' csv saver
 #'
-#'Saves a data
+#'Saves a data set
 #' @param dataset data set to be saved
 #' @param filename name to give it
-#' @param row.names
-#' @param ...
+#' @param row.names extra
 #'
-#' @return
+#'
+#' @return saved file
+#'
+#'
+#'
+#' @import ggplot2
+#' @import dplyr
+#'
 #' @export
 #'
-#' @examples
-#'
-#'
-save_as_csv <- function(dataset,filename, row.names = FALSE, ...){
+save_as_csv <- function(dataset,filename, row.names = FALSE){
   assert_that(has_extension(filename, "csv"))
   assert_that(is.dir(dirname(filename)))
   assert_that(is.writeable(dirname(filename)))
   assert_that(not_empty(dataset))
   assert_that(is.data.frame(dataset))
 
-  write.csv2(dataset, file = filename, row.names = row.names, ...)
+  write.csv2(dataset, file = filename, row.names = row.namess)
 
   invisible(normalizePath(filename))
 }

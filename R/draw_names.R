@@ -4,9 +4,12 @@
 #' @param names vector of the names to be
 #'
 #' @return plot of the 2 names
+#'
+#' @import ggplot2
+#' @import dplyr
 #' @export
 #'
-#' @examples
+#'
 draw_names <- function(names){
   resume <- prenoms %>% filter(name == names[1]|name == names[2]) %>%
     group_by(year) %>% summarise(total=sum(n))
