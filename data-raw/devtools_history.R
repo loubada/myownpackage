@@ -1,0 +1,8 @@
+devtools::use_data_raw()
+devtools::use_package("magrittr")
+devtools::use_package("readxl")
+devtools::use_package("prenoms")
+devtools::use_package("ggplot2")
+devtools::use_package("dplyr")
+devtools::use_package("dygraphs")
+devtools::use_package("tidyr")
