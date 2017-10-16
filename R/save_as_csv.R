@@ -12,6 +12,8 @@
 #'
 #' @import ggplot2
 #' @import dplyr
+#' @import utils
+#' @import assertthat
 #'
 #' @export
 #'
@@ -22,7 +24,7 @@ save_as_csv <- function(dataset,filename, row.names = FALSE){
   assert_that(not_empty(dataset))
   assert_that(is.data.frame(dataset))
 
-  write.csv2(dataset, file = filename, row.names = row.namess)
+  write.csv2(dataset, file = filename, row.names = row.names)
 
   invisible(normalizePath(filename))
 }

@@ -5,15 +5,16 @@
 #'
 #' @return plot of the 2 names
 #'
+#' @import prenoms
 #' @import ggplot2
 #' @import dplyr
 #' @export
 #'
 #'
 draw_names <- function(names){
-  resume <- prenoms %>% filter(name == names[1]|name == names[2]) %>%
-    group_by(year) %>% summarise(total=sum(n))
-  p <- ggplot(data = resume, aes(x=year, y=total), color=name) + geom_line()
+  resume <- prenoms::prenoms %>% filter(prenoms$name == names[1]|prenoms$name == names[2]) %>%
+    group_by(prenoms$year) %>% summarise(total=sum(prenoms$n))
+  p <- ggplot(data = resume, aes(x=prenoms$year, y=total), color=prenoms$name) + geom_line()
 
   return(p)
 }

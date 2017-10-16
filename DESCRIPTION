@@ -14,4 +14,6 @@ Imports: magrittr,
     ggplot2,
     dplyr,
     dygraphs,
-    tidyr
+    tidyr,
+    utils,
+    assertthat

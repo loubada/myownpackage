@@ -8,13 +8,14 @@
 #' @import ggplot2
 #' @import prenoms
 #' @import dplyr
+#'
 #' @export
 #'
 #'
 draw_a_name <- function(the_name, the_sex){
-  resume <- prenoms %>% filter(name == the_name, sex == the_sex) %>%
-    group_by(year) %>% summarise(total=sum(n))
-  p <- ggplot(data = resume, aes(x=year, y=total)) + geom_line()
+  resume <- prenoms::prenoms %>% filter(prenoms$name == the_name, prenoms$sex == the_sex) %>%
+    group_by(prenoms$year) %>% summarise(total=sum(prenoms$n))
+  p <- ggplot(data = resume, aes(x=prenoms$year, y=total)) + geom_line()
 
   return(p)
 }
