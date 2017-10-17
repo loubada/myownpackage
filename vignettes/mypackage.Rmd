@@ -13,3 +13,14 @@ This package contains 5 functions and aims to fulfill the homework assignment.
 
 ##draw_a_name
 
+This function plots the popularity in France of a name.
+
+
+##draw_names
+
+This function plots the popularity in France of 2 names.
+
+
+##read_excel_multi
+
+##my_csv_reader
