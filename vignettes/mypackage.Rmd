@@ -23,4 +23,11 @@ This function plots the popularity in France of 2 names.
 
 ##read_excel_multi
 
+This function reads all the sheets of an excel file.
+
+
 ##my_csv_reader
+
+This function reads csv and saves csv files.
+
+
